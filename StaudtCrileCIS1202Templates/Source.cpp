@@ -3,30 +3,41 @@
 //May 7, 2023
 
 #include<iostream>
-
+#include <cmath>
 
 using namespace std;
 
 template <class T>
-T Half(T);
+T Half(T num) {
 
-int Half(int);
+	T half = (num / 2);
 
-int main() {
-
-	double a;
-	float b;
-	int c;
-
-
-
+	return half;
 
 }
 
-int Half(int integer) {
+int Half(int i) {
 
-	int intFinal;
+	double integer = static_cast<double>(i);
+	float half = (integer / 2);
+	int intFinal = round(half);
 
 	return intFinal;
 
 }
+
+int main() {
+
+	double a = 7.0;
+	float b = 5.0;
+	int c = 3;
+
+	cout << Half(a) << endl;
+	cout << Half(b) << endl;
+	cout << Half(c) << endl;
+
+
+}
+
+
+
